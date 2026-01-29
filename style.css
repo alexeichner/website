@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+    font-family: monospace, serif;
+    background-color: #f04624;
+    color: white;
+}
+
+.header {
+    padding: 5%;
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+.mainContent {
+    /* padding-left: 5%; */
+}
+
+.flexBox {
+    /* background-color: beige; */
+    /* padding: 2.5rem; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.aboutMe {
+    margin: 1rem;
+    width: 40%;
+}
+
+.box2 {
+    margin: 1rem;
+    width: 20%;
+}
+
+a {
+    text-decoration: none;
+    color: gold;
+    transition: color 500ms ease-out 100ms;
+}
+
+a:hover {
+    color: blue;
+}
+
+.projectBox {
+    margin: 1rem;
+    width: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
