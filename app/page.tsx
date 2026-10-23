@@ -1,11 +1,6 @@
 export default function Home() {
   return (
     <main className="space-y-12">
-      <section>
-        <p className="text-xl">Welcome.</p>
-        <hr className="mt-4" />
-      </section>
-
       <section className="grid md:grid-cols-2 gap-12">
         <div className="space-y-3">
           <h1 className="text-2xl font-semibold">Who is this guy?</h1>

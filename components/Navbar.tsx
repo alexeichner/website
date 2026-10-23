@@ -2,6 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Climate_Crisis } from "next/font/google";
+
+const climate_crisis = Climate_Crisis({
+  subsets: ["latin"],
+  weight: ["400"],
+})
 
 const navItems = [
   { name: "Welcome", href: "/" },
@@ -25,8 +31,8 @@ export default function Navbar() {
             className={`
               transition-all duration-300 ease-out
               ${isActive
-                ? "text-4xl font-bold"
-                : "text-lg text-gray-500 hover:text-black"}
+                ? `${climate_crisis.className} text-6xl text-accent`
+                : `${climate_crisis.className} text-lg hover:text-accent`}
             `}
           >
             {item.name}

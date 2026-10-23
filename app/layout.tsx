@@ -2,6 +2,14 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Merriweather } from "next/font/google";
+
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-merriweather",
+});
+
 
 export default function RootLayout({
   children,
@@ -10,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="max-w-4xl mx-auto px-6">
+      <body className={`${merriweather.variable} max-w-4xl mx-auto px-6`}>
         <Navbar />
         {children}
         <Footer />
