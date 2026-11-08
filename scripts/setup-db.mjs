@@ -11,4 +11,4 @@ const schema = await readFile(new URL("../db/schema.sql", import.meta.url), "utf
 
 await sql.unsafe(schema);
 await sql.end();
-console.log("Guestbook table is ready.");
+console.log("Database tables are ready.");

@@ -1,9 +1,8 @@
 "use server";
 
-import { createHash } from "node:crypto";
-import { headers } from "next/headers";
 import { revalidatePath } from "next/cache";
 import { addEntry, countRecentEntries } from "@/lib/guestbook";
+import { clientIpHash } from "@/lib/ip";
 
 export type SignState = {
   status: "idle" | "success" | "error";
@@ -15,14 +14,6 @@ const NAME_MAX = 50;
 const MESSAGE_MAX = 500;
 const RATE_LIMIT = 3;
 const RATE_WINDOW_MINUTES = 10;
-
-// Store a salted hash instead of the raw IP so the table holds no addresses.
-async function clientIpHash() {
-  const h = await headers();
-  const ip = h.get("x-real-ip") ?? h.get("x-forwarded-for")?.split(",")[0].trim() ?? "unknown";
-  const salt = process.env.GUESTBOOK_IP_SALT ?? "";
-  return createHash("sha256").update(salt + ip).digest("hex");
-}
 
 export async function signGuestbook(_prev: SignState, formData: FormData): Promise<SignState> {
   // Bots tend to fill every field; people never see this one, so pretend it worked.

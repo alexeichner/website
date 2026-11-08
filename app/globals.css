@@ -8,6 +8,7 @@
   --text-secondary: #5FBB97;
   --accent: #f04624;
   --border: #e5e7eb;
+  --found: #bfb7c6;
 }
 
 /* Expose variables to Tailwind theme */
@@ -18,6 +19,7 @@
   --color-accent: var(--accent);
   --color-tert: var(--text-tertiary);
   --color-border: var(--border);
+  --color-found: var(--found);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
