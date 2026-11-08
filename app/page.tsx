@@ -8,7 +8,7 @@ export default function Home() {
             I am <a className="underline" href="http://www.alexeichner.com/">Alex Eichner</a>.
           </p>
           <p>
-            I work at <a className="underline" href="https://www.bookandstreet.com/">Book+Street</a> as the Systems and Operations Analyst.
+            I work at <a className="underline" href="https://www.battelle.org/">Battelle</a> as a Vulnerability Researcher.
           </p>
           <p>
             I can <a className="underline" href="https://www.sporcle.com/games/g/world">name every country</a> in less than 10 minutes.
